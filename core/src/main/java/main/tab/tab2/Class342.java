@@ -1,0 +1,12 @@
+package main.tab.tab2;
+final class Class342 implements Class256 {
+   private Class464 Field1;
+
+   Class342(Class464 var1) {
+      this.Field1 = var1;
+   }
+
+   public final void Field1() {
+      Class464.Field3(this.Field1);
+   }
+}

@@ -1,0 +1,22 @@
+package main.tab.tab1;
+
+final class Class591 implements Class258 {
+    private Class326 Field1;
+    private final byte[][] Field2;
+
+    Class591(Class326 var1, byte[][] var2) {
+        this.Field1 = var1;
+        this.Field2 = var2;
+    }
+
+    public final void Field1() {
+        for (int var1 = this.Field1.Field20.size() - 1; var1 >= 0; --var1) {
+            Class274 var2 = (Class274) this.Field1.Field20.elementAt(var1);
+            Class326.Field1(this.Field1, var2);
+        }
+
+//      Class263.Field1().Field1((short)((short)null.size()), (short)0, (byte[][])this.Field2);
+        this.Field1.Field105.Field2.Field1();
+        Class105.Field8();
+    }
+}

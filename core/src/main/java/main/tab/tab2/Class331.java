@@ -1,0 +1,12 @@
+package main.tab.tab2;
+public final class Class331 {
+   public byte Field1 = 0;
+   public byte Field2 = 0;
+   public String Field3 = "";
+
+   public Class331(short var1, String var2, byte var3, byte var4) {
+      this.Field3 = var2;
+      this.Field2 = var4;
+      this.Field1 = var3;
+   }
+}

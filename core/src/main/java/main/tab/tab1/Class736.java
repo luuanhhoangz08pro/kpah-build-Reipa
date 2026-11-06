@@ -1,0 +1,80 @@
+package main.tab.tab1;
+import java.util.Random;
+import java.util.Vector;
+
+public final class Class736 extends Class435 {
+   private boolean Field6 = false;
+   private Vector Field7 = new Vector();
+
+   public Class736(boolean var1) {
+      this.Field6 = var1;
+   }
+
+   public final void Field1(Vector var1) {
+      this.Field7 = var1;
+   }
+
+   public final void Field1(Class359 var1) {
+      var1.Field23 = 4;
+      Class435.Field1(var1, 0);
+      if (var1.Field73 == 13) {
+         int var2;
+         int var3 = var2 = (new Random(System.currentTimeMillis())).nextInt() % 20;
+         if (var1.Field12 != 0 && var1.Field12 != 1) {
+            var2 = 0;
+         } else {
+            var3 = 0;
+         }
+
+         if (var1.Field67 != null) {
+            if (var1.Field67.Field188 == 1) {
+               if (var1.Field131 == 0) {
+                  Class74.Field1(var1.Field67.Field193 + var2, var1.Field67.Field194 - 10 + var3, 11);
+                  var1.Field67.Field1();
+               } else if (var1.Field131 == 2) {
+                  Class74.Field1(var1.Field67.Field193 + var2, var1.Field67.Field194 - 10 + var3, 12);
+                  var1.Field67.Field12();
+               }
+            }
+
+            var1.Field67.Field3 = 2;
+         }
+
+         int var4;
+         Class111 var5;
+         if (!this.Field6) {
+            for(var4 = 0; var4 < this.Field7.size(); ++var4) {
+               Class74.Field2((var5 = (Class111)this.Field7.elementAt(var4)).Field193 - 10 + var2, var5.Field194 - 25 + var3, 14);
+               Class74.Field2(var5.Field193 + 10 + var2, var5.Field194 - 25 + var3, 14);
+               Class74.Field2(var5.Field193 + var2, var5.Field194 - 25 - 10 + var3, 14);
+               if (var1.Field90 != 0 && var1.Field90 != 2000000) {
+                  Class105.Field19.Field1("-" + var1.Field90, 0, var5.Field193, var5.Field194 - 15, -1, -2);
+               }
+
+               if (var1.Field131 != 0 && var1.Field131 < Class787.Field4.length) {
+                  Class105.Field19.Field1(Class787.Field4[var1.Field131], 0, var5.Field193, var5.Field194 - 15, 2, -2);
+               }
+            }
+         } else {
+            for(var4 = 0; var4 < this.Field7.size(); ++var4) {
+               var5 = (Class111)this.Field7.elementAt(var4);
+               Class369 var6 = new Class369(var1.Field193, var1.Field194 + 37, var5, 1, true);
+               if (var1.Field90 != 0 && var1.Field90 != 2000000) {
+                  var6.Field1[0] = "-" + var1.Field90;
+               }
+
+               if (var1.Field131 != 0) {
+                  var6.Field1[1] = Class787.Field4[var1.Field131];
+               }
+
+               Class74.Field2.addElement(var6);
+            }
+         }
+      }
+
+      ++var1.Field73;
+   }
+
+   public final void Field1(Class123 var1) {
+   }
+}
