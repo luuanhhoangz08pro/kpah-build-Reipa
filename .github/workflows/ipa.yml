@@ -1,0 +1,35 @@
+name: IPA
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ipa:
+    runs-on: macos-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Xcode
+        run: xcodebuild -version
+
+      - name: Build unsigned IPA
+        run: |
+          chmod +x ./gradlew
+          ./gradlew :ios:createIPA --no-daemon --stacktrace \
+            -Dorg.gradle.jvmargs="-Xmx3g -XX:MaxMetaspaceSize=512m -Dfile.encoding=UTF-8"
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: KPAH-unsigned
+          path: ios/build/robovm/*.ipa
+          if-no-files-found: error
+          retention-days: 14

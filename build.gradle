@@ -29,7 +29,7 @@ allprojects {
 
 configure(subprojects) {
   apply plugin: 'java-library'
-  // ios:createIPA runs on RoboVM 2.3.22, which accepts class files through Java 18.
+  // ios:createIPA runs on RoboVM 2.3.26, which accepts class files through Java 18.
   sourceCompatibility = 1.8
 
   tasks.register('generateAssetList') {
